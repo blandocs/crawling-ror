@@ -1,0 +1,111 @@
+
+<% @doc.each do |col| %>
+    <% if @start == true %>
+        <% if @data == false %>
+             <% @data = true %>
+        <% else %>
+        
+            <% if @type == 0 %>
+                <p>아침: </p>
+                <% @type = 1 %>
+                
+            <% elsif @type == 1 %>
+                <p>점심: </p>
+                <% @type = 2 %>
+                
+            <% elsif @type == 2 %>
+                <p>저녁: </p>
+                <% @type = 0 %>
+                <% @start = false %>
+            <% end %>
+            
+            <% @menu = col.text.to_s %>
+            <% if col.text.to_s.include? "ⓐ" %> 
+                <% @menu = @menu.gsub("ⓐ" , "2500원 " )%>
+            <% end %>
+            <% if col.text.to_s.include? "ⓑ" %> 
+                <% @menu = @menu.gsub("ⓑ" , "3000원 " )%>
+            <% end %>
+            <% if col.text.to_s.include? "ⓒ" %>   
+                <% @menu = @menu.gsub("ⓒ" , "3500원 " )%>
+            <% end %>
+            <% if col.text.to_s.include? "ⓓ"  %> 
+                <% @menu = @menu.gsub("ⓓ" , "4000원 " )%>
+            <% end %>
+            <% if col.text.to_s.include? "ⓔ" %> 
+                <% @menu = @menu.gsub("ⓔ" , "4500원 " )%>
+            <% end %>
+            <% if col.text.to_s.include? "ⓕ" %> 
+                <% @menu = @menu.gsub("ⓕ" , "5000원 " )%>
+            <% end %>
+            <% if col.text.to_s.include? "ⓗ" %> 
+                <% @menu = @menu.gsub("ⓗ", "기타" )%>
+            <% end %>
+            
+                <td><%= @menu %></td>
+     
+            
+            <% @data = false %>
+        <% end %>
+     
+        
+    <% end %>
+    
+    <% if col.text.to_s.include? "학생회관식당학생회관(63동)"%>
+        <% @start = true %>
+        <% @type = 0 %>
+        <li>
+            <td><%= col.text %></td>
+        </li>
+    <% end %>
+    
+    <% if col.text.to_s.include? "3식당"%>
+        <% @start = true %>
+        <li>
+            <td><%= col.text %></td>
+        </li>
+    <% end %>
+    
+    <% if col.text.to_s.include? "기숙사식당"%>
+        <% @start = true %>
+        <li>
+            <td><%= col.text %></td>
+        </li>
+    <% end %>
+
+    <% if col.text.to_s.include? "자하연식당"%>
+        <% @start = true %>
+        <li>
+            <td><%= col.text %></td>
+        </li>
+    <% end %>
+
+    <% if col.text.to_s.include? "302동식당"%>
+        <% @start = true %>
+        <li>
+            <td><%= col.text %></td>
+        </li>
+    <% end %>
+    
+    <% if col.text.to_s.include? "솔밭간이식당"%>
+        <% @start = true %>
+        <li>
+            <td><%= col.text %></td>
+        </li>
+    <% end %>
+    
+    <% if col.text.to_s.include? "동원관식당"%>
+        <% @start = true %>
+        <li>
+            <td><%= col.text %></td>
+        </li>
+    <% end %>
+    
+    <% if col.text.to_s.include? "감골식당"%>
+        <% @start = true %>
+        <li>
+            <td><%= col.text %></td>
+        </li>
+    <% end %>
+    
+<% end %>
