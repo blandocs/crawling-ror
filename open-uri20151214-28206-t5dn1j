@@ -1,0 +1,477 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>생활협동조합</title>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<link href="/common/css/common.css" rel="STYLESHEET" type="text/css"/>
+<link href="/common/css/restaurant.css" rel="STYLESHEET" type="text/css"/>
+<script language="JavaScript" src="/common/js/common.js"></script>
+<script language="javascript" src="/common/xmlHttp/xmlHttp.js"></script>
+
+<script language="javascript" type="text/javascript">
+
+	function Map_Popup() {
+		window.open('/html/map/map_01.asp?flag=1&flag2=1','map_pop','width=916,height=656');
+	}
+
+
+	function openURL(menu){
+
+		if (menu=="SUNMALL"){
+			frmMenu.location.href="/common/inc/main_meun_counter.asp?menu="+menu;
+			location.href = "/html/snumall/l_goods_list2.asp?l_cd=1";
+		}
+
+		if (menu=="STORE"){
+			frmMenu.location.href="/common/inc/main_meun_counter.asp?menu="+menu;
+			location.href = "/html/store/store_main.asp";
+		}
+
+
+		if (menu=="REST"){
+			frmMenu.location.href="/common/inc/main_meun_counter.asp?menu="+menu;
+			location.href = "/html/restaurant/main.asp";
+		}
+
+		if (menu=="LIFE"){
+			frmMenu.location.href="/common/inc/main_meun_counter.asp?menu="+menu;
+			location.href = "/html/life/life_main.asp";
+		}
+
+		if (menu=="CAFE"){
+			frmMenu.location.href="/common/inc/main_meun_counter.asp?menu="+menu;
+			location.href = "/html/community/community_main.asp";
+		}
+
+		if (menu=="PARTNER"){
+			frmMenu.location.href="/common/inc/main_meun_counter.asp?menu="+menu;
+			location.href = "/html/partner/partner_main.asp";
+		}
+
+
+		if (menu=="MAP"){
+			frmMenu.location.href="/common/inc/main_meun_counter.asp?menu="+menu;
+			Map_Popup();
+		}
+
+	}
+
+</script>
+
+</head>
+<body>
+<div class="wrap">
+	<div id="top">
+		<iframe name="frmMenu" width="1" height="0" frameborder="1"></iframe>
+
+		<div style="float:left;width:206px;padding:7px 0px 8px 60px"><a href="/"><img src="/images/common/sunco_logo.gif" border="0" alt="서울대학교생활협동조합"/></a></div>
+		<div style="float:right;padding:10px 0px 0px 447px;text-align:right;">
+		</br></br>
+		
+			<a href="javascript:Login_Pop()"><img src="/images/common/btn_login.gif" border="0" alt="로그인" style="margin-right:1px;"/></a>
+			<a href="/html/member/member_main.asp"><img src="/images/common/btn_member.gif" border="0" alt="회원가입" style="margin-right:9px;"/></a>
+		
+			<a href="http://www.snuco.com/eng_main.asp"><img src="/images/common/btn_english.gif" border="0" alt="english" style="margin-right:8px;"/></a>
+			<a href="/html/guitar/guitar_public_board.asp"><img src="/images/common/btn_news.gif" border="0" alt="공고" style="margin-right:8px;"/></a>
+			<a href="/html/guitar/sitemap.asp"><img src="/images/common/btn_sitemap.gif" border="0" alt="사이트맵" style="margin-right:7px;"/></a>
+			<a href="/html/guitar/snuco_map.asp"><img src="/images/common/btn_contactus.gif" border="0" alt="contactus"/></a>
+		</div>
+	</div>
+	<div class="Content_top_bg">
+		<div id="left" style="float:left;">
+			<div style="float:left"><img src="/images/restaurant/restaurant_left_img.gif" border="0" alt=""/></div>
+			<div style="float:left;width:147px;">
+				<div><img src="/images/restaurant/restaurant_left_top_img.gif" border="0" alt=""/></div>
+				<div style="float:left">
+                <table border="0" cellpadding="0" cellspacing="0" width="147">
+                    <tr>
+                        <td class="list_01_dot"></td>
+                    </tr>
+                </table>
+        		</div>
+				<div><a href="http://www.snumall.com" target="_blank"><img src="/images/common/menu_01.gif" border="0" alt="snumall" onmouseover="this.src='/images/common/menu_01_ov.gif'" onmouseout="this.src='/images/common/menu_01.gif'"/></a></div>
+				<div style="float:left">
+                    <table border="0" cellpadding="0" cellspacing="0" width="147">
+                        <tr>
+                            <td class="list_01_dot"></td>
+                        </tr>
+                    </table>
+        		</div>
+				<div><!--a href="store_main.asp"--><a href="javascript:openURL('STORE');"><img src="/images/common/menu_02.gif" border="0" alt="매장" onmouseover="this.src='/images/common/menu_02_ov.gif'" onmouseout="this.src='/images/common/menu_02.gif'"/></a></div>
+				<div style="border-bottom: 1px solid #a9bfd5;"></div>
+				<div><!--a href="/html/restaurant/main.asp"--><a href="javascript:openURL('REST');"><img src="/images/common/menu_03_ov.gif" border="0" alt="식당"/></a></div>
+				<div style="width:147px;">
+					<table border="0" cellpadding="0" cellspacing="0">
+					<colgroup>
+					<col width="147"/>
+					</colgroup>
+					<tbody>
+					<tr>
+						<td style="height:24px;padding-top:5px;">
+							<a href="/html/restaurant/restaurant_management.asp"  class="link1">운영안내</a>
+						</td>
+					</tr>
+					<tr>
+						<td style="height:19px;">
+							<a href="/html/restaurant/restaurant_info1_01.asp"  class="link1">식당안내</a>
+						</td>
+					</tr>
+					<tr>
+					<td>
+						<table border="0" cellpadding="0" cellspacing="0" style="float:right;">
+						<colgroup>
+						<col width="140"/>
+						</colgroup>
+						<tbody>
+						<tr>
+							<td style="padding-top:8px"><img src="/images/common/blit_gray.gif" style="vertical-align:middle" alt=""/>
+								<a href="/html/restaurant/restaurant_info1_01.asp" class="link1">직영식당</a>
+							</td>
+						</tr>
+						<tr>
+							<td style="padding-top:3px"><img src="/images/common/blit_gray.gif" style="vertical-align:middle" alt=""/>
+								<a href="/html/restaurant/restaurant_info2_01.asp" class="link1">위탁식당</a>
+							</td>
+						</tr>
+							<td style="padding-top:3px"><img src="/images/common/blit_gray.gif" style="vertical-align:middle" alt=""/>
+								<a href="/html/restaurant/restaurant_cafe_01.asp" class="link1">카페</a>
+							</td>
+						</tr>
+						<tr>
+							<td style="padding-top:3px"><img src="/images/common/blit_gray.gif" style="vertical-align:middle" alt=""/>
+								<a href="/html/restaurant/restaurant_etc.asp" class="link1">기타</a>
+							</td>
+						</tr>
+						</tbody>
+						</table>
+					</td>
+					</tr>
+					<tr>
+						<td style="height:19px;padding-top:5px;"><a href="/html/restaurant/restaurant_menu1.asp" class="link1">Menu</a></td>
+					</tr>
+					<tr>
+					<td>
+						<table border="0" cellpadding="0" cellspacing="0" style="float:right;">
+						<colgroup>
+						<col width="140"/>
+						</colgroup>
+						<tbody>
+						<tr>
+							<td style="padding-top:3px"><img src="/images/common/blit_gray.gif" style="vertical-align:middle" alt=""/>
+								<a href="/html/restaurant/restaurant_menu1.asp" class="link1">직영식당</a>
+							</td>
+						</tr>
+							<td style="padding-top:3px"><img src="/images/common/blit_gray.gif" style="vertical-align:middle" alt=""/>
+								<a href="/html/restaurant/restaurant_menu2.asp" class="link1">위탁식당</a>
+							</td>
+						</tr>
+						</tbody>
+						</table>
+					</td>
+					</tr>
+					<tr>
+						<td style="height:19px;padding-top:5px;">
+							<a href="/html/restaurant/restaurant_compus_tour.asp" class="link1">캠퍼스투어식당이용안내</a>
+						</td>
+					</tr>
+					<tr>
+						<td style="height:19px;padding-top:5px;">
+							<a href="/html/restaurant/restaurant_nutrition.asp" class="link1">영양/식품정보</a>
+						</td>
+					</tr>
+					<tr>
+						<td style="height:19px;padding-top:5px;">
+							<a href="/html/restaurant/restaurant_monitoring_1.asp" class="link1">식당모니터링</a>
+						</td>
+					</tr>
+					<tr>
+						<td style="height:19px;padding-top:5px;">
+							<a href="javascript:Map_Popup2();" class="link1">식당위치</a>
+						</td>
+					</tr>
+					<tr>
+						<td style="height:19px;padding-top:5px;">
+							<a href="/html/restaurant/restaurant_notice.asp" class="link1">공지사항</a>
+						</td>
+					</tr>
+					<tr>
+						<td style="height:24px;padding-bottom:5px;">
+							<a href="/html/restaurant/restaurant_word.asp" class="link1">한마디제안</a>
+						</td>
+					</tr>
+					</tbody>
+					</table>
+				</div>
+				<div style="border-bottom: 1px solid #a9bfd5;"></div>
+				<div><!--a href="/html/life/life_main.asp"--><a href="javascript:openURL('LIFE');"><img src="/images/common/menu_04.gif" alt="생활정보" onmouseover="this.src='/images/common/menu_04_ov.gif'" onmouseout="this.src='/images/common/menu_04.gif'"/></a></div>
+				<div style="float:left">
+                    <table border="0" cellpadding="0" cellspacing="0" width="147">
+                        <tr>
+                            <td class="list_01_dot"></td>
+                        </tr>
+                    </table>
+                </div>
+				<!-- <div><a href="javascript:openURL('CAFE');"><img src="/images/common/menu_05.gif" alt="커뮤니티" onmouseover="this.src='/images/common/menu_05_ov.gif'" onmouseout="this.src='/images/common/menu_05.gif'"/></a></div>
+				<div style="float:left">
+                    <table border="0" cellpadding="0" cellspacing="0" width="147">
+                        <tr>
+                            <td class="list_01_dot"></td>
+                        </tr>
+                    </table>
+                </div> -->
+				<div><!--a href="/html/partner/partner_main.asp"--><a href="javascript:openURL('PARTNER');"><img src="/images/common/menu_06.gif" alt="조합원&학생위원회" onmouseover="this.src='/images/common/menu_06_ov.gif'" onmouseout="this.src='/images/common/menu_06.gif'"/></a></div>
+				<div style="float:left">
+                    <table border="0" cellpadding="0" cellspacing="0" width="147">
+                        <tr>
+                            <td class="list_01_dot"></td>
+                        </tr>
+                    </table>
+                </div>
+				<div><!--a href="javascript:Map_Popup();"--><a href="javascript:openURL('MAP');"><img src="/images/common/menu_07.gif" alt="지도보기" onmouseover="this.src='/images/common/menu_07_ov.gif'" onmouseout="this.src='/images/common/menu_07.gif'"/></a></div>
+				<div style="float:left">
+                    <table border="0" cellpadding="0" cellspacing="0" width="147">
+                        <tr>
+                            <td class="list_01_dot"></td>
+                        </tr>
+                    </table>
+                </div>
+				<!--<div style="clear:both;float:left;width:147px;margin-top:30px;" class="banner_bg">
+					<div style="width:147px;text-align:center;padding-top:80px;float:left;"><a href="http://wedding.snuco.com/sub3-1.asp" target="blnak"><img src="/images/common/btn_ok.gif" border="0" alt="예약확인" /></a> <a href="http://wedding.snuco.com/sub3-3.asp?gubun=wed" target="blnak"><img src="/images/common/btn_click.gif" border="0" alt="예약신청" /></a></div>
+				</div>-->				
+				<div style="width:147px;margin-top:5px;">&nbsp;<br/><a href="/html/store/store_meetingroom_list.asp"><!--<img src="/images/common/btn_application.gif" width="147" border="0" alt="회의실예약신청" />--></a></div>
+			</div>
+		</div>
+		<!-- Left 영역 //-->
+
+
+
+		<!-- Content 영역 -->
+		<div id="Content">
+			<div style="float:left;text-align:left;width:766px;"><img src="/images/common/content_top_img.gif" border="0" alt=""/></div>
+			<div class="Content_bg">
+				<div style="width:700px;margin-left:54px;">
+					<div style="float:left;"><img src="/images/restaurant/restaurant_title.gif" border="0" alt="cafeteria"/></div>
+<script language="JavaScript">
+	function PrintMenu() {
+		URL = "restaurant_menu_print.asp?gubun=1&date=2015-12-15";
+		window.open (URL,"print", "width=620,height=700,scrollbars=no, left=10, top=10");
+	}
+
+	//하루동안 이창을 열지않음 소스입니다
+	function GetCookie(name){
+		var cname = name + "=";
+		var dc = document.cookie;
+		var val = "";
+		if (dc.length > 0) {
+			begin = dc.indexOf(cname);
+			if (begin != -1) {
+				begin += cname.length;
+				end = dc.indexOf(";", begin);
+				if (end == -1) end = dc.length;
+				val += unescape(dc.substring(begin, end));
+
+			}
+		}
+		return val;
+	}
+
+	/* 감사의달 이벤트 팝업 */
+	/*
+	if (GetCookie('cookieEvent0507') != "pop0507") {
+		window.open('/popup/20100507/main_popup_100507.html', 'noticepop0507','scrollbars=no,width=602,height=920,resizable=no,left=80,top=10');
+	}
+	*/
+</script>
+<div style="float:left;text-align:right;width:692px;margin:13px 15px 13px 0px;" class="text1"><a href="/main.asp">Home</a> > 식당 > Menu > 직영식당</div>
+<!-- 본문내용 width값 586-->
+<div style="float:left;width:586px;">
+	<div><img src="/images/restaurant/restaurant_img_text_03.gif" alt="준직영식당"/></div>
+	<div style="float:left;">
+		<div style="float:left;"><img src="/images/restaurant/img_09.gif" alt=""/></div>
+		<div style="float:left;"><img src="/images/restaurant/img_10.gif" alt=""/></div>
+	</div>
+
+	<div style="float:left;width:586px;">
+		<div class="left_text15" style="margin-top:10px; padding-right:5px; width:515px; text-align:right; float:left;">
+		</div>
+		<div style="float:right;padding-right:5px">
+			<a href="/html/restaurant/restaurant_menu2.asp"><img src="/images/common/btn_restaurant.gif" border="0" alt="준직영식당" /></a>
+		</div>
+		<div style="float:left;width:586px;" >
+			<div style="float:left;"><img src="/images/restaurant/tab_left.gif" border="0" alt="" /><a href="?date=2015-12-20"><img src="/images/restaurant/tab_sun.gif" border="0" alt="일요일" /></a><a href="?date=2015-12-14"><img src="/images/restaurant/tab_mon.gif" border="0" alt="월요일" /></a><a href="?date=2015-12-15"><img src="/images/restaurant/tab_tue_ov.gif" border="0" alt="화요일" /></a><a href="?date=2015-12-16"><img src="/images/restaurant/tab_wed.gif" border="0" alt="수요일" /></a><a href="?date=2015-12-17"><img src="/images/restaurant/tab_the.gif" border="0" alt="목요일" /></a><a href="?date=2015-12-18"><img src="/images/restaurant/tab_fri.gif" border="0" alt="금요일" /></a><a href="?date=2015-12-19"><img src="/images/restaurant/tab_sat.gif" border="0" alt="토요일" /></a><img src="/images/restaurant/tab_right.gif" border="0" alt="" />
+			</div>
+		</div>
+		<!--<div style="float:left;margin:10px 0px 12px 0px;font-size: 11px;color: #777777;width : 560px;border: 1px solid #eddab8;background-color: #fdfbf6;padding: 10px;"> <span class="left_text13">12월 15일 화요일 (*은 교직원 식단입니다.)</span></div>-->
+		<div style="float:left;width: 586px;">
+			<table width="586px" cellpadding="0" cellspacing="0" border="0" >
+				<col width="149px" />
+				<col width="1px" />
+				<col width="144px" />
+				<col width="1px" />
+				<col width="143px" />
+				<col width="1px" />
+				<col width="147px" />
+
+				<tbody>
+				<tr>
+					<td style="height:29px;border-top: 2px solid #c7ab61; border-bottom: 1px solid #ffffff;background-color: #eee6cf; text-align: center; vertical-align: middle;"><img src="/images/mail/img_text_29.gif" alt="상품명" /></td>
+					<td bgcolor="#ffffff" style="width:1px;"></td>
+					<td style="border-top: 2px solid #c7ab61; border-bottom: 1px solid #ffffff;background-color: #eee6cf;text-align: center; vertical-align: middle;"><img src="/images/mail/img_text_30.gif" alt="옵션" /></td>
+					<td bgcolor="#ffffff" style="width:1px;"></td>
+					<td style="border-top: 2px solid #c7ab61; border-bottom: 1px solid #ffffff;background-color: #eee6cf;text-align: center; vertical-align: middle;"><img src="/images/mail/img_text_31.gif" alt="수량" /></td>
+					<td bgcolor="#ffffff" style="width:1px;"></td>
+					<td style="border-top: 2px solid #c7ab61; border-bottom: 1px solid #ffffff;background-color: #eee6cf;text-align: center; vertical-align: middle;"><img src="/images/mail/img_text_32.gif" alt="판매가" /></td>
+				</tr>
+								<tr align=center>
+					<td style="padding:3px;border-bottom: 1px solid #c7ab61;text-align: center; vertical-align: middle;"><span class="left_text14">학생회관식당<br/>학생회관&#40;63동&#41;</span></td>
+					<td bgcolor="#c7ab61" style="width:1px;"></td>
+					<td style="padding:3px;border-bottom: 1px solid #c7ab61;text-align: center; vertical-align: middle;">ⓐ토마토스크램블에그&nbsp;</td>
+					<td bgcolor="#c7ab61" style="width:1px;"></td>
+					<td style="padding:3px;border-bottom: 1px solid #c7ab61;text-align: center; vertical-align: middle;">ⓓ매운닭볶음/ⓐ어묵탕/ⓓ돌솥날치알김치비빔밥&nbsp;</td>
+					<td bgcolor="#c7ab61" style="width:1px;"></td>
+					<td style="padding:3px;border-bottom: 1px solid #c7ab61;text-align: center; vertical-align: middle;">ⓕ갈비구이/ⓐ무쇠고기국백반&nbsp;</td>
+				</tr>
+				<tr align=center>
+					<td style="padding:3px;border-bottom: 1px solid #c7ab61;text-align: center; vertical-align: middle;"><span class="left_text14">3식당<br/>전망대(75-1동)</span></td>
+					<td bgcolor="#c7ab61" style="width:1px;"></td>
+					<td style="padding:3px;border-bottom: 1px solid #c7ab61;text-align: center; vertical-align: middle;">&nbsp;</td>
+					<td bgcolor="#c7ab61" style="width:1px;"></td>
+					<td style="padding:3px;border-bottom: 1px solid #c7ab61;text-align: center; vertical-align: middle;">ⓓ자반고등어구이/ⓕ닭볶음탕<br />
+ⓓ돈까스덮밥/ⓓ떡만두국&nbsp;</td>
+					<td bgcolor="#c7ab61" style="width:1px;"></td>
+					<td style="padding:3px;border-bottom: 1px solid #c7ab61;text-align: center; vertical-align: middle;">ⓓ오므라이스/ⓓ갈비탕&nbsp;</td>
+				</tr>
+				<tr align=center>
+					<td style="padding:3px;border-bottom: 1px solid #c7ab61;text-align: center; vertical-align: middle;"><span class="left_text14">기숙사식당<br/>관악사&#40;919동&#41;</span></td>
+					<td bgcolor="#c7ab61" style="width:1px;"></td>
+					<td style="padding:3px;border-bottom: 1px solid #c7ab61;text-align: center; vertical-align: middle;">ⓒ제육김치두루치기&nbsp;</td>
+					<td bgcolor="#c7ab61" style="width:1px;"></td>
+					<td style="padding:3px;border-bottom: 1px solid #c7ab61;text-align: center; vertical-align: middle;">ⓒ새우된장찌개/ⓕ돌솥너비아니구이&nbsp;</td>
+					<td bgcolor="#c7ab61" style="width:1px;"></td>
+					<td style="padding:3px;border-bottom: 1px solid #c7ab61;text-align: center; vertical-align: middle;">ⓒ홍합탕/ⓓ깐풍기/ⓓ타코라이스&nbsp;</td>
+				</tr>
+				<tr align=center>
+					<td style="padding:3px;border-bottom: 1px solid #c7ab61;text-align: center; vertical-align: middle;"><span class="left_text14">자하연식당<br/>농협&#40;109동&#41;</span></td>
+					<td bgcolor="#c7ab61" style="width:1px;"></td>
+					<td style="padding:3px;border-bottom: 1px solid #c7ab61;text-align: center; vertical-align: middle;">&nbsp;</td>
+					<td bgcolor="#c7ab61" style="width:1px;"></td>
+					<td style="padding:3px;border-bottom: 1px solid #c7ab61;text-align: center; vertical-align: middle;">ⓒ꽃게된장찌개/ⓕ시나몬치킨스테이크&nbsp;</td>
+					<td bgcolor="#c7ab61" style="width:1px;"></td>
+					<td style="padding:3px;border-bottom: 1px solid #c7ab61;text-align: center; vertical-align: middle;">ⓒ동태찌개/ⓓ돈까스커리&nbsp;</td>
+				</tr>
+				<tr align=center>
+					<td style="padding:3px;border-bottom: 1px solid #c7ab61;text-align: center; vertical-align: middle;"><span class="left_text14">302동식당<br/>302동</span></td>
+					<td bgcolor="#c7ab61" style="width:1px;"></td>
+					<td style="padding:3px;border-bottom: 1px solid #c7ab61;text-align: center; vertical-align: middle;">&nbsp;</td>
+					<td bgcolor="#c7ab61" style="width:1px;"></td>
+					<td style="padding:3px;border-bottom: 1px solid #c7ab61;text-align: center; vertical-align: middle;">ⓓ얼큰홍합어묵꼬치/ⓓ치킨텐더&nbsp;</td>
+					<td bgcolor="#c7ab61" style="width:1px;"></td>
+					<td style="padding:3px;border-bottom: 1px solid #c7ab61;text-align: center; vertical-align: middle;">ⓒ김치볶음밥&소스/ⓓ갈비탕&nbsp;</td>
+				</tr>
+				<tr align=center>
+					<td style="padding:3px;border-bottom: 1px solid #c7ab61;text-align: center; vertical-align: middle;"><span class="left_text14">솔밭간이식당<br/>110동</span></td>
+					<td bgcolor="#c7ab61" style="width:1px;"></td>
+					<td style="padding:3px;border-bottom: 1px solid #c7ab61;text-align: center; vertical-align: middle;">&nbsp;</td>
+					<td bgcolor="#c7ab61" style="width:1px;"></td>
+					<td style="padding:3px;border-bottom: 1px solid #c7ab61;text-align: center; vertical-align: middle;">ⓕ쇠고기국밥/ⓗ순대국밥/ⓗ김치찌개/ⓓ국수/ⓓ만두&nbsp;</td>
+					<td bgcolor="#c7ab61" style="width:1px;"></td>
+					<td style="padding:3px;border-bottom: 1px solid #c7ab61;text-align: center; vertical-align: middle;">ⓕ쇠고기국밥/ⓗ순대국밥/ⓗ김치찌개/ⓓ국수/ⓓ만두&nbsp;</td>
+				</tr>
+				<tr align=center>
+					<td style="padding:3px;border-bottom: 1px solid #c7ab61;text-align: center; vertical-align: middle;"><span class="left_text14">동원관식당<br/>113동</span></td>
+					<td bgcolor="#c7ab61" style="width:1px;"></td>
+					<td style="padding:3px;border-bottom: 1px solid #c7ab61;text-align: center; vertical-align: middle;">&nbsp;</td>
+					<td bgcolor="#c7ab61" style="width:1px;"></td>
+					<td style="padding:3px;border-bottom: 1px solid #c7ab61;text-align: center; vertical-align: middle;">ⓒ짬뽕국/ⓓ깐풍기&nbsp;</td>
+					<td bgcolor="#c7ab61" style="width:1px;"></td>
+					<td style="padding:3px;border-bottom: 1px solid #c7ab61;text-align: center; vertical-align: middle;">ⓓ만두김치전골/ⓓ크림소스오므라이스&nbsp;</td>
+				</tr>
+				<tr align=center>
+					<td style="padding:3px;border-bottom: 1px solid #c7ab61;text-align: center; vertical-align: middle;"><span class="left_text14">감골식당<br/>101동</span></td>
+					<td bgcolor="#c7ab61" style="width:1px;"></td>
+					<td style="padding:3px;border-bottom: 1px solid #c7ab61;text-align: center; vertical-align: middle;">&nbsp;</td>
+					<td bgcolor="#c7ab61" style="width:1px;"></td>
+					<td style="padding:3px;border-bottom: 1px solid #c7ab61;text-align: center; vertical-align: middle;">ⓓ새우튀김우동/ⓓ불고기덮밥<br />
+ⓙ채식메뉴(두부덮밥,뿌리채소스키야끼,참나물겉절이,감자맛탕,모듬버섯볶음,해초샐러드)&nbsp;</td>
+					<td bgcolor="#c7ab61" style="width:1px;"></td>
+					<td style="padding:3px;border-bottom: 1px solid #c7ab61;text-align: center; vertical-align: middle;">ⓓ제육콩나물찜&nbsp;</td>
+				</tr>
+
+				</tbody>
+			</table>
+
+			<table width="586px" cellpadding="0" cellspacing="0" border="0" style="margin-top:5px;">
+				<tr>
+					<td width="486px" class="left_text15">ⓐ 2500원 ⓑ 3000원 ⓒ 3500원 ⓓ 4000원 ⓔ 4500원 ⓕ 5000원 ⓖ 기타 <!--ⓗ--> <br/>*는 메인메뉴가 채식입니다.<br>(서울대 구성원은 800~1,000원 할인 됩니다.)</td>
+					<td width="100px" align="right"><a href="" onclick="PrintMenu(); return false;"><img src="/images/common/btn_print.gif" border="0" alt="프린트" /></a></td>
+				</tr>
+			</table>					
+		</div>		
+		
+		<div style="height:50px"></div>
+	</div>
+</div>
+
+
+
+<!--[s] quick in-->
+<div id="warp_scr_btn" style="position:absolute;top:66px;left:170px;border:0px solid red">
+<div id="btn_top" style="position:absolute;left:715px;top:220px;z-index:1;border:0px solid red">
+	<!-- 퀵메뉴-->
+	<div style="float:right;width:95px;">
+		<!--<div style="width:95px;"><img src="/images/common/quick_top.gif" border="0" alt=""/></div>-->
+        <!--<div style="width:95px;background:url(/images/common/quick_bg.gif) repeat-y;">-->
+		<div style="width:95px;>
+			<div style="width:61px;text-align: center;padding-left:16px">
+
+				<img src="../../images/common/q_banner_01.jpg" border="0" alt="snumall"/>
+                <a href="http://www.snumall.com" target="_blank"><img src="../../images/common/q_banner_02.jpg" border="0" alt="서울대생협"/></a>
+				<a href="http://coop.yonsei.ac.kr" target="_blank"><img src="../../images/common/q_banner_03.jpg" border="0" alt="연세대학교"/></a>
+                <a href="http://coop.ewha.ac.kr" target="_blank"><img src="../../images/common/q_banner_04.jpg" border="0" alt="이화여자대학교"/></a>
+                <img src="../../images/common/q_banner_05.jpg" border="0" alt="블랭크"/>
+                <a href="http://snuco.com/html/partner/partner_word.asp"><img src="../../images/common/q_banner_06.jpg" border="0" alt="한마디제안"/></a>
+				<a href="http://www.facebook.com/snuco" target="_blank"><img src="../../images/common/q_banner_07.jpg" border="0" alt="페이스북"/></a>
+				<!--<img src="/images/common/quick_img_line.gif" border="0" alt=""/>-->
+				
+					<!--<a href="http://www.snuco.com/html/snumall/goods_buyinfo_confirm.asp"><img src="/images/common/quick_img_02.gif" border="0" alt="배송정보확인"/></a>-->
+				
+
+				<!--<img src="/images/common/quick_img_line.gif" border="0" alt=""/>-->
+				<!--<a href="http://www.snuco.com/html/snumall/snumall_qna.asp"><img src="/images/common/quick_img_03.gif" border="0" alt="쇼핑q&a"/></a>-->
+
+				<!--<img src="/images/common/quick_img_line.gif" border="0" alt=""/>
+				
+                                    <a href="http://www.snuco.com/html/restaurant/restaurant_word.asp"><img src="/images/common/quick_img_04.gif" border="0" alt="한마디제안"/></a>
+                
+
+					<a href="http://www.facebook.com/snuco" target="_blank"><img src="/images/common/quick_facebook.gif" border="0" alt=""/></a>-->
+			</div>
+		</div>
+		<!--<div style="clear:both;width:95px;"><img src="/images/common/quick_bottom.gif" border="0" alt=""/></div>-->
+	</div>
+	<!-- 퀵메뉴 //-->
+	</div>
+</div>
+<!--[e]quick out-->
+<script type="text/javascript">initMoving(document.getElementById("warp_scr_btn"), 66, 66, 700);</script>
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="footer">
+	<div style="width:766px">
+    	<div style="clear:both;text-align:left;float:left"><img src="/images/common/bottom_01.gif" border="0" alt=""/></div>
+		<div style="clear:both;float:left;margin-top:40px; padding-left:35px;"><img src="/images/common/bottom_logo.gif" border="0" alt=""/></div>
+		<div style="float:left;margin:40px 0px 0px 15px"><a href="/html/footer/bottom_snuco_group.asp"><img src="/images/common/bottom_text_1.gif" border="0" alt="생활협동조합소개"/></a><img src="/images/common/bottom_text_line.gif" border="0" alt=""/><a href="/html/footer/bottom_map.asp"><img src="/images/common/bottom_text_2.gif" border="0" alt="찾아오시는길"/></a><img src="/images/common/bottom_text_line.gif" border="0" alt=""/><a href="/html/footer/bottom_use_law.asp"><img src="/images/common/bottom_text_3.gif" border="0" alt="이용약관"/></a><a href="/html/footer/bottom_personal_law.asp"><img src="/images/common/bottom_text_4.gif" border="0" alt="개인보호정책"/></a><a href="/html/footer/bottom_email_law.asp"><img src="/images/common/bottom_text_5.gif" border="0" alt="이메일무단수집거부"/></a></div>
+		<div style="clear:both;float:left;margin-top:-30px; padding-left:230px ;width:770px" class="footer_text01">151-742 서울특별시 관악구 관악로 1 서울대학교 생활협동조합 사업자등록번호 : 119-82-02666<br />통신판매업신고 : 관악제 18-01942호 Tel : 02) 880-8556 Fax : 02) 872-3150<span class="footer_text01"> COPYRIGHT(C) 2005 SUNCOMPANY.COM ALL RIGHTS RESERVED.</span></div>
+        <div style="float:left;margin-top:-55px; padding-left:800px"><a href="javascript:All_Menu_DisChk();"><img src="/images/eng/common/eng_main_icon04.gif" border="0" alt="전체메뉴보기"/></a>
+	</div>
+	</div>
+	</div>
+</div>
+</body>
+</html>

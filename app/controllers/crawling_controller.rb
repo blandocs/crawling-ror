@@ -10,4 +10,5 @@ class CrawlingController < ApplicationController
     @data = false
     @menu
   end
+ 
 end

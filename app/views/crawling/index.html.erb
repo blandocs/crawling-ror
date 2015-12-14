@@ -41,9 +41,25 @@
             <% if col.text.to_s.include? "ⓗ" %> 
                 <% @menu = @menu.gsub("ⓗ", "기타" )%>
             <% end %>
-            
-                <td><%= @menu %></td>
-     
+                
+                <% @food = @menu.split('/')[0] %>
+                 
+                <% if @food != nil && @food.split(' ')[1] != nil %>
+                    <a href = <%= "/ranks/show_food?food=" + @food.split(' ')[1] %>><td><%= @food %></td></a>
+                    <% @food = @menu.split('/')[1] %>
+                <% end %>
+                
+                <% if @food != nil && @food.split(' ')[1] != nil %>
+                    <a href= <%= "/ranks/show_food?food=" + @food.split(' ')[1] %>><td><%= @food %></td></a>
+                    <% @food = @menu.split('/')[2] %>
+                <% end %>
+                <% if@food != nil &&  @food.split(' ')[1] != nil %>
+                    <a href= <%= "/ranks/show_food?food=" + @food.split(' ')[1] %>><td<%= @food %></td></a>
+                    <% @food = @menu.split('/')[3] %>
+                <% end %>
+                <% if @food != nil && @food.split(' ')[1] != nil %>
+                    <a href= <%= "/ranks/show_food?food=" + @food.split(' ')[1] %>><td><%= @food %></td></a>
+                <% end %>
             
             <% @data = false %>
         <% end %>
@@ -69,7 +85,7 @@
     <% if col.text.to_s.include? "기숙사식당"%>
         <% @start = true %>
         <li>
-            <td><%= col.text %></td>
+            <a><td><%= col.text %></td></a>
         </li>
     <% end %>
 

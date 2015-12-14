@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
+  
+
   root 'crawling#index'
   get 'crawling/index'
-
+  get 'crawling/rank_food'
+  get 'ranks/show_food'
+  resources :ranks
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
